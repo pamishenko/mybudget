@@ -13,6 +13,13 @@
         <property name="show_sql">true</property>
         <property name="current_session_context_class">thread</property>
 
+        <mapping class="ru.pamishenko.myBudget.entitys.Product"/>
+        <mapping class="ru.pamishenko.myBudget.entitys.Purchase"/>
         <mapping class="ru.pamishenko.myBudget.entitys.Rolle"/>
+        <mapping class="ru.pamishenko.myBudget.entitys.Saler"/>
+        <mapping class="ru.pamishenko.myBudget.entitys.User"/>
+        <mapping class="ru.pamishenko.myBudget.entitys.Type"/>
+        <mapping class="ru.pamishenko.myBudget.entitys.Cathegory"/>
+        <mapping class="ru.pamishenko.myBudget.entitys.ProductUnit"/>
     </session-factory>
 </hibernate-configuration>

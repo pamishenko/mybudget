@@ -1,10 +1,11 @@
 package ru.pamishenko.myBudget.entitys;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name = "stores")
-public class Store {
+@Table(name = "salers")
+public class Saler {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
@@ -12,6 +13,17 @@ public class Store {
 
     @Column
     private String name;
+
+    @OneToMany(mappedBy = "saler")
+    private List<Purchase> purchases;
+
+    public List<Purchase> getPurchases() {
+        return purchases;
+    }
+
+    public void setPurchases(List<Purchase> purchases) {
+        this.purchases = purchases;
+    }
 
     public Long getId() {
         return id;
@@ -29,10 +41,15 @@ public class Store {
         this.name = name;
     }
 
-    public Store() {
+    public Saler() {
     }
 
-    public Store(String name) {
+    public Saler(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

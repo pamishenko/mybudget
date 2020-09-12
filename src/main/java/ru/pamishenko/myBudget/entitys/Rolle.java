@@ -2,6 +2,7 @@ package ru.pamishenko.myBudget.entitys;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "rolles")
@@ -14,6 +15,9 @@ public class Rolle implements Serializable {
 
     @Column
     private String name;
+
+    @OneToMany(mappedBy = "rolle")
+    private List<User> users;
 
     public long getId() {
         return id;
@@ -31,12 +35,22 @@ public class Rolle implements Serializable {
         this.name = name;
     }
 
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
     public Rolle(String name) {
         this.name = name;
+    }
+    public Rolle() {
     }
 
     @Override
     public String toString() {
-        return String.format("Rolle [id = %d, name = %s]", id, name);
+        return name;
     }
 }

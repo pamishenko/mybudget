@@ -13,7 +13,7 @@ public class RolleCRUD {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         SessionFactory factory = new Configuration()
-                .configure("configs/hibernate.cfg.xml")
+                .configure("configs/user/hibernate.cfg.xml")
                 .buildSessionFactory();
 
         Session session = null;
@@ -23,14 +23,14 @@ public class RolleCRUD {
             /**
              *create
              */
-//            session = factory.getCurrentSession();
-//            session.beginTransaction();
-//            System.out.print("input name rolle: ");
-//            String temp = reader.readLine();
-//            Rolle newRolle = new Rolle(temp);
-//            session.save(newRolle);
-//            session.getTransaction().commit();
-//            System.out.println(newRolle.toString());
+            session = factory.getCurrentSession();
+            session.beginTransaction();
+            System.out.print("input name rolle: ");
+            String temp = reader.readLine();
+            Rolle newRolle = new Rolle(temp);
+            session.save(newRolle);
+            session.getTransaction().commit();
+            System.out.println(newRolle.toString());
 
 
             /**
@@ -60,13 +60,13 @@ public class RolleCRUD {
             /**
              * delete
              */
-            String rolleFromDelete;
-            session = factory.getCurrentSession();
-            session.beginTransaction();
-            rolleFromDelete = session.createQuery("SELECT (s.name) FROM Rolle s WHERE s.name = '57user'", String.class).getSingleResult();
-            session.delete(session.get(Rolle.class, maxId));
-            System.out.println("delete " + rolleFromDelete);
-            session.getTransaction().commit();
+//            String rolleFromDelete;
+//            session = factory.getCurrentSession();
+//            session.beginTransaction();
+//            rolleFromDelete = session.createQuery("SELECT (s.name) FROM Rolle s WHERE s.name = '57user'", String.class).getSingleResult();
+//            session.delete(session.get(Rolle.class, maxId));
+//            System.out.println("delete " + rolleFromDelete);
+//            session.getTransaction().commit();
 
 
         } catch (Exception e){
