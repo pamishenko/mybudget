@@ -11,23 +11,26 @@ import org.hibernate.Session;
 public class WorkingWithUsers {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String temp = reader.readLine();
 
         SessionFactory factory = new Configuration()
-                .configure("configs/hibernate.cfg")
+                .configure("configs/hibernate.cfg.xml")
                 .buildSessionFactory();
 
         Session session = null;
 
-        while (temp != "end" || temp != ""){
+
             session = factory.getCurrentSession();
             session.beginTransaction();
-            System.out.print("Введите название роли: ");
 
-            Rolle newRolle = new Rolle(reader.readLine());
+            System.out.print("input name rolle: ");
+            String temp = reader.readLine();
+
+            Rolle newRolle = new Rolle(temp);
             session.save(newRolle);
             session.getTransaction().commit();
-        }
+
+
+
 
     }
 }
