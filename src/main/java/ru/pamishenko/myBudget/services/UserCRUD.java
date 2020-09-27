@@ -3,34 +3,34 @@ package ru.pamishenko.myBudget.entitys;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import ru.pamishenko.myBudget.model.person.Rolle;
+import ru.pamishenko.myBudget.model.person.User;
 
-public class PurchaseCRUD {
+public class UserCRUD {
     public static void main(String[] args) {
+
         SessionFactory factory = new Configuration()
-                .configure("configs/product/hibernate.cfg.xml")
+                .configure("configs/user/hibernate.cfg.xml")
                 .buildSessionFactory();
 
         Session session = null;
 
-        try {
+        try{
             session = factory.getCurrentSession();
             session.beginTransaction();
-
-            System.out.println("=====================================");
-
-
-            Product product = session.get(Product.class, 1L);
-            Saler saler = session.get(Saler.class, 1L);
-            User user = session.get(User.class, 1L);
-            String check = "check002";
-            Integer count = 2;
-            long price = 345;
-
-            Purchase  purchaseCreate = new Purchase(user, check, saler, product, count, price);
-            System.out.println(purchaseCreate);
-            session.save(purchaseCreate);
+            Rolle rolle = session.get(Rolle.class, 3L);
+            System.out.println(rolle);
+            for (User u : rolle.getUsers()){
+                System.out.println(u);
+            }
             session.getTransaction().commit();
-            System.out.println(purchaseCreate);
+
+
+            session = factory.getCurrentSession();
+            session.beginTransaction();
+            User user = session.get(User.class, 1L);
+            System.out.println("======= PAVEL: " + user);
+            session.getTransaction().commit();
 
 
         }catch (Exception e){
@@ -41,6 +41,7 @@ public class PurchaseCRUD {
                 session.close();
             }
         }
+
 
     }
 }

@@ -19,22 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="507f5f35-dbc7-4446-9d25-b3d1493e31d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/ProductCRUD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/ProductUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/PurchaseCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Cathegory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Cathegory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Purchase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Rolle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Rolle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/RolleCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/RolleCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Saler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Saler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/UserCRUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pamishenko/myBudget/entitys/UserCRUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/configs/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/configs/product/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/configs/user/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/configs/user/hibernate.cfg.xml" afterDir="false" />
-    </list>
+    <list default="true" id="507f5f35-dbc7-4446-9d25-b3d1493e31d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
